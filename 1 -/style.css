@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+}
+
+.glow-btn {
+    background-color: #cccccc;
+    border: 2px solid rgba(85, 4, 85, 0.9);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.glow-btn:hover {
+    box-shadow: 0 0 20px 10px rgba(85, 4, 85, 0.9);
+}
