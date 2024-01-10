@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@600&display=swap');
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a4a3a3;
+  background: -webkit-linear-gradient(0deg, #a4a3a3 0%, #9f9f9f 100%);
+  background: linear-gradient(0deg, #a4a3a3 0%, #9f9f9f 100%);
+  font-family: 'Tektur', sans-serif;
+}
+
+#typewriter {
+  border-right: 2px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 20.5ch;
+  animation: typing 2s steps(35, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { 
+    width: 0 
+  }
+  to { 
+    width: 20.5ch 
+  }
+}
+
+@keyframes blink-caret {
+  from, to { 
+    border-color: transparent 
+  }
+  50% { 
+    border-color: black 
+  }
+}
