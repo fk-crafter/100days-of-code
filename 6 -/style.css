@@ -14,7 +14,6 @@ body {
 }
 
 .navbar {
-    /* background: linear-gradient(to right, #ff6600, #ff3366); */
     background: radial-gradient(rgb(219, 234, 254), rgb(147, 197, 253), rgb(59, 130, 246));
     display: flex;
     justify-content: space-between;
