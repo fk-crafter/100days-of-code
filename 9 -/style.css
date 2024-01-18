@@ -1,0 +1,51 @@
+body {
+    background: #a0a0a0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.arrow {
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    font-size: 50px;
+    margin-top: -8px;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.step2 {
+    background-color: rgb(124, 124, 124);
+}
+
+.step3, .step4, .step5 {
+    background-color: lightgrey; /* Future steps */
+}
