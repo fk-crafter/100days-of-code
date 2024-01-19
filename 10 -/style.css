@@ -25,10 +25,10 @@ body, html {
 }
 
 #section2 { 
-    background-image: url('./img2.jpg'); 
+    background-image: url('img2.jpg'); 
 }
 
 #section3 { 
-    background-image: url('img2'); 
+    background-image: url('img2.jpg'); 
 }
   
