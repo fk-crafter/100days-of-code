@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+
+.content {
+    color: rgb(148, 6, 6);
+    text-align: center;
+    padding: 20px;
+}
+
+.parallax {
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+#section1 { 
+    background-image: url('./img/cloud.jpg'); 
+}
+
+#section2 { 
+    background-image: url('./img/camera.jpg'); 
+}
+
+#section3 { 
+    background-image: url('./img/mac.jpg'); 
+}
+  
