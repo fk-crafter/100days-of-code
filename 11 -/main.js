@@ -1,17 +1,17 @@
-document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.getElementById('loginForm').addEventListener('submit', (event) => {
     event.preventDefault();
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
 
     if(username === '' || password === '') {
-        document.getElementById('error-message').textContent = 'Error : Complete all required fields.';
+        document.getElementById('error-message').textContent = 'Error: Complete all required fields.';
     } else {
         document.getElementById('error-message').textContent = '';
         resetButtonPosition();
     }
 });
 
-function moveButton() {
+const moveButton = () => {
     let submitButton = document.querySelector('input[type="submit"]');
     let buttonRect = submitButton.getBoundingClientRect();
     let formRect = document.querySelector('.login-container').getBoundingClientRect();
@@ -27,13 +27,13 @@ function moveButton() {
     submitButton.style.transform = `translate(${newX - buttonRect.left}px, ${newY - buttonRect.top}px)`;
 }
 
-function resetButtonPosition() {
+const resetButtonPosition = () => {
     let submitButton = document.querySelector('input[type="submit"]');
     submitButton.style.transform = 'translate(0, 0)';
 }
 
 let submitButton = document.querySelector('input[type="submit"]');
-submitButton.addEventListener('mouseover', function(event) {
+submitButton.addEventListener('mouseover', (event) => {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
     if(username === '' || password === '') {
@@ -42,7 +42,7 @@ submitButton.addEventListener('mouseover', function(event) {
 });
 
 document.querySelectorAll('input[type="text"], input[type="password"]').forEach(input => {
-    input.addEventListener('input', function() {
+    input.addEventListener('input', () => {
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
         if(username !== '' && password !== '') {
