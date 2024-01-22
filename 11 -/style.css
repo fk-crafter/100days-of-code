@@ -1,0 +1,56 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #414345, #232526);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #555;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #333;
+    color: #ddd;
+    transition: background-color 0.3s;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background: linear-gradient(145deg, #556, #778);
+    border-color: #777;
+    outline: none; 
+}
+
+input[type=submit] {
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.5s ease; 
+    position: relative;
+}
+
+input[type=submit]:hover {
+    background: linear-gradient(45deg, #16222A, #3A6073);
+}
+
+#error-message {
+    color: #e57373;
+    margin: 10px 0;
+}
