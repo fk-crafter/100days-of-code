@@ -3,7 +3,6 @@ function toggleMenu() {
     menu.classList.toggle("show");
 }
 
-// Fermer le menu lorsque l'on clique en dehors
 window.onclick = function(event) {
     if (!event.target.matches('#hamburger-icon')) {
         var menu = document.getElementById("hamburger-contents");
@@ -13,7 +12,6 @@ window.onclick = function(event) {
     }
 }
 
-// Fermer le menu avec la touche Échap
 document.onkeydown = function(evt) {
     evt = evt || window.event;
     var isEscape = false;
