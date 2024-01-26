@@ -6,5 +6,5 @@ body {
 }
 
 h1 { 
-  cursor: url('./tp-master-sword-cursor.cur'), auto;
+  cursor: url('cursor.cur'), auto;
 }
