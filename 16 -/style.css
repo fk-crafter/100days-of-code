@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+    margin: 20px;
+}
+
+.accordion-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    background: #eee;
+    border: none;
+    outline: none;
+    padding: 15px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.plus-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    background-color: white;
+    max-height: 0;
+    padding: 0 15px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+
+.accordion-content p {
+    margin: 15px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.accordion-button.active {
+    background-color: #ccc;
+}
+
+.accordion-button.active .plus-icon {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.accordion-button.active + .accordion-content {
+    max-height: 100vh;
+    padding: 15px;
+}
+
+.accordion-button.active + .accordion-content p {
+    opacity: 1;
+}
