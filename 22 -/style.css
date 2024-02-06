@@ -31,7 +31,7 @@ input[type="range"] {
     width: 80%;
     height: 10px;
     border-radius: 5px;
-    background: linear-gradient(to right, #264653, #2a7a9e); /* Dégradé de bleu foncé pour la barre de défilement */
+    background: linear-gradient(to right, #264653, #2a7a9e);
     outline: none;
     margin-bottom: 10px;
 }
