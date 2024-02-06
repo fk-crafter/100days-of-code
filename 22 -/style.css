@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #0c0c33, #1a1a4f);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    background: linear-gradient(to bottom, #141432, #1e1e53);
+    border: 1px solid #0c0c33;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #3498db;
+}
+
+.password-container {
+    margin-top: 20px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #264653, #2a7a9e); /* Dégradé de bleu foncé pour la barre de défilement */
+    outline: none;
+    margin-bottom: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3498db; /* Couleur du curseur */
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3498db; /* Couleur du curseur */
+    cursor: pointer;
+}
+
+#passwordLengthDisplay {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #3498db; /* Couleur du texte à côté de la barre */
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Dégradé de bleu foncé pour le bouton */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0056b3, #004080); /* Dégradé de bleu foncé pour le bouton au survol */
+}
+
+.password-output {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #0c0c33;
+    border-radius: 4px;
+    font-size: 18px;
+    word-break: break-all;
+    background: linear-gradient(to bottom, #141432, #1e1e53); /* Dégradé de bleu foncé pour la sortie du mot de passe */
+    color: #ffffff;
+}
