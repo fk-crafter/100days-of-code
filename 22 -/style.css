@@ -72,7 +72,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(to right, #0056b3, #004080); /* Dégradé de bleu foncé pour le bouton au survol */
+    background: linear-gradient(to right, #0056b3, #004080);
 }
 
 .password-output {
@@ -82,6 +82,6 @@ button:hover {
     border-radius: 4px;
     font-size: 18px;
     word-break: break-all;
-    background: linear-gradient(to bottom, #141432, #1e1e53); /* Dégradé de bleu foncé pour la sortie du mot de passe */
+    background: linear-gradient(to bottom, #141432, #1e1e53); 
     color: #ffffff;
 }
