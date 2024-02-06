@@ -58,7 +58,7 @@ input[type="range"]::-moz-range-thumb {
     display: inline-block;
     margin-left: 10px;
     font-size: 16px;
-    color: #3498db; /* Couleur du texte à côté de la barre */
+    color: #3498db;
 }
 
 button {
