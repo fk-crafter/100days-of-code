@@ -63,7 +63,7 @@ input[type="range"]::-moz-range-thumb {
 
 button {
     padding: 10px;
-    background: linear-gradient(to right, #007bff, #0056b3); /* Dégradé de bleu foncé pour le bouton */
+    background: linear-gradient(to right, #007bff, #0056b3);
     color: #ffffff;
     border: none;
     border-radius: 4px;
