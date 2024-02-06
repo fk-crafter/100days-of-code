@@ -50,7 +50,7 @@ input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #3498db; /* Couleur du curseur */
+    background: #3498db;
     cursor: pointer;
 }
 
