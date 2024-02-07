@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 400vh;
+    background-color: #f4f4f4;
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fade-in img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .content {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  p {
+    color: #555;
+  }
+  
