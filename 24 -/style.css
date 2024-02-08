@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .rolling-text {
+    overflow: hidden;
+    white-space: nowrap;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-container {
+    display: inline-block;
+    padding: 20px;
+    color: #333;
+    animation: roll 10s linear infinite;
+  }
+  
+  .text-container p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .text-container h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #c0392b;
+  }
+  
+  .text-container a {
+    text-decoration: none;
+    color: #c0392b;
+    font-weight: bold;
+  }
+  
+  @keyframes roll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
