@@ -1,0 +1,37 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    background: #facc24;
+    background: -webkit-linear-gradient(0deg, #facc24 0%, #3d17ec 100%);
+    background: linear-gradient(0deg, #facc24 0%, #3d17ec 100%);
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.card {
+    background: transparent;
+    background-color: #3d17ec;
+    backdrop-filter: blur(40px);
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    padding: 20px;
+    transition: transform 0.5s;
+    width: 350px;
+    height: 220px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.content p {
+    margin: 0;
+}
