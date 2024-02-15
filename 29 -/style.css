@@ -7,7 +7,7 @@
 
 body {
     min-height: 100vh;
-    background: url(./assets/galaxybg.jpg) no-repeat;
+    background: url(bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
