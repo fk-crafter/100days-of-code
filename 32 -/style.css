@@ -1,0 +1,111 @@
+
+
+:root {
+    --primary: #0969DA;
+    --background: #EDEEF7;
+    --gray: #EDEEF7;
+    --white: #FCFCFC;
+    --navbar-height: 60px;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+    background-color: var(--background);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#team-members {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    max-width: 400px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 32px;
+    box-shadow: 
+     rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+.team-member {
+    position: relative;
+    z-index: 1;
+    min-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-radius: 24px;
+    font-size: 16px;
+    padding: 16px;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 
+     rgba(0, 0, 0, 0.05) 0px 6px 24px 0px;
+}
+
+.team-member:hover {
+    cursor: grab;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+    gap: 6px;
+    flex-direction: row;
+}
+
+.social-links i {
+    height: 20px;
+    width: 20px;
+}
+
+.team-member-avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-member-socials {
+    display: flex;
+    gap: 8px;
+}
+
+.team-member-name {
+    display: grid;
+    gap: 2px;
+}
+
+.team-member-name h3 {
+    font-size: large;
+}
+
+.team-member-name p {
+    font-size: smaller;
+}
+
+.team-member-chosen {
+    box-shadow: 8px 8px 32px #E1E1E1;
+}
+
+.team-member-drag {
+    opacity: 0;
+}
+
+@media (max-width: 400px) {
+    .social-links {
+        display: none;
+    }
+}
