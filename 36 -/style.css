@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+body {
+    background: linear-gradient(to right, #474bff, #bc48ff);
+}
+
+.carrousel {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.carrousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrousel-images img {
+    width: 100%; 
+    flex: 0 0 auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
