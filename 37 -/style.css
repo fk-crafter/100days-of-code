@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #18c18a;
+    background: -webkit-linear-gradient(0deg, #18c18a 0%, #5731fd 100%);
+    background: linear-gradient(0deg, #18c18a 0%, #5731fd 100%);
+}
+  
+.text-center {
+    font-size: 2rem;
+    font-weight: bold;
+}
+  
+.letter {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.letter.animation-1:hover {
+    transform: translateY(-20px);
+}
+  
+.letter.animation-2:hover {
+    transform: rotate(15deg);
+}
+  
+.letter.animation-3:hover {
+    transform: rotate(360deg);
+}
