@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(121, 119, 119);
+}
+
+.loader {
+    border: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-right: 8px solid transparent;
+    background-image: linear-gradient(rgb(146, 146, 146), rgb(119, 119, 119)), linear-gradient(to right, #474bff, #bc48ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
