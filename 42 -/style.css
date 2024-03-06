@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 113vh;
+    margin: 0;
+    background-color: #4b3b3b;
+}
+
+.btn-confetti {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4612be;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-confetti:hover {
+    background-color: #290875;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+.btn-confetti:active {
+    background-color: #180641;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transform: translateY(1px);
+}
