@@ -1,0 +1,28 @@
+body {
+  background: #9b9797;
+  font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#loadingBarContainer {
+  width: 50%;
+  background-color: #ddd;
+  margin: 15px auto;
+}
+
+#loadingBar {
+  width: 0%;
+  height: 30px;
+  background-color: #09440b;
+}
+
+#loadingPercent {
+  text-align: center;
+}
