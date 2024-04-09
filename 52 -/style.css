@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=IBM%20Plex%20Sans:300,500");
+
+:root {
+  --margin: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: #d5d5d5;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 190vh;
+  margin: 0;
+  font-size: calc(0.3 * var(--margin));
+}
+
+h2 {
+  font-weight: 500;
+  text-align: center;
+  font-size: var(--margin);
+  margin: 0;
+}
+
+.action-card {
+  height: calc(8 * var(--margin));
+  width: calc(12 * var(--margin));
+  background: linear-gradient(0deg, #474bff 0%, #bc48ff 100%);
+  color: black;
+  border-radius: calc(0.5 * var(--margin));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--margin);
+  position: fixed;
+  margin: calc(2 * var(--margin));
+}
+
+button {
+  background-color: #000;
+  color: #e5e5e5;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: calc(0.4 * var(--margin));
+  padding: calc(0.35 * var(--margin));
+  border: none;
+  border-radius: calc(0.3 * var(--margin));
+}
+
+footer {
+  margin-top: 80vh;
+  z-index: 500;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  padding: 5rem 2vw;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 50%);
+  z-index: -7;
+}
+
+.backdrop-filter {
+  z-index: -5;
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: calc(0.3 * var(--margin));
+  width: 28%;
+}
+
+.info-col {
+  background: #6a00ff;
+  background: -webkit-linear-gradient(0deg, #6a00ff 0%, #6907f3 100%);
+  background: linear-gradient(0deg, #6a00ff 0%, #6907f3 100%);
+  border-radius: calc(0.5 * var(--margin));
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --margin: 3rem;
+}
+}
+
+@media screen and (max-width: 700px) {
+footer {
+  flex-direction: column;
+  padding: 5rem 20vw;
+}
+.footer-col {
+  width: 100%;
+}
+}
