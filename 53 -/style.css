@@ -366,7 +366,7 @@ body {
 
 .container-tendance {
   display: flex;
-  padding: 10px 10px 0 0;
+  padding: 10px 10px 0 10px;
 }
 
 .tendance-stuff {
@@ -502,3 +502,5 @@ footer {
     text-align: center;
     margin-top: 20px;
 }
+
+/* responsive  */
