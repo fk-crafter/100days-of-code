@@ -58,6 +58,7 @@ body {
 }
 
 /* espace entre les items et les catégories*/
+
 .nav-list i {
     margin-right: 10px;
 }
@@ -136,6 +137,7 @@ body {
 }
 
 /* style recherche */
+
 .search-box {
     display: none;
     position: absolute;
@@ -220,8 +222,6 @@ body {
     transition: 0.3s ease-in;
     color: #000000;
 }
-
-
 
 .carousel-content2 a {
     text-decoration: none;
@@ -349,6 +349,7 @@ body {
 }
 
 /*list*/
+
 .list-category-item {
     margin-bottom: 30px;
     height: 10px;
