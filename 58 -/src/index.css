@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+iframe {
+  display: block;
+  margin: 20px 0;
+}
+
+
+
+.like-button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.like-button-border {
+  border: 2px solid #555555;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin-right: 8px;
+}
+
+.heart {
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.heart.filled {
+  color: red;
+}
+
+@media (max-width: 480px) {
+  .text-input {
+    width: 18.8rem;
+  }
+
+  .ytb-video iframe {
+    width: 300px;
+    height: 160px; 
+  }
+  
+  .title, .subtitle {
+    text-align: center;
+  }
+
+}
