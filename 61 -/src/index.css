@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', sans-serif;  
+  background: #52cd60;
+  background: -webkit-linear-gradient(144deg, #52cd60 0%, #1849a7 100%);
+  background: linear-gradient(144deg, #52cd60 0%, #1849a7 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  text-align: center;
+  color: #FFCC01;
+  padding: 5px 10px; /* Ajout de rembourrage pour séparer le texte du contour */
+  text-shadow:
+    -5px -5px 0 #375DAA,  
+    5px -5px 0 #375DAA,
+    -5px 5px 0 #375DAA,
+    5px 5px 0 #375DAA; /* Crée un contour autour du texte en utilisant des ombres */
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #52cd60;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #46a749;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.pokemon-card {
+  background: #bac3cf;
+  background: -webkit-linear-gradient(144deg, #bac3cf 0%, #f1e26a 100%);
+  background: linear-gradient(144deg, #bac3cf 0%, #f1e26a 100%);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokemon-card img {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.pokemon-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.pokemon-details p {
+  margin: 0;
+}
+
