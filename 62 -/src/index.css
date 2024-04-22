@@ -1,0 +1,80 @@
+body { 
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box; 
+  min-height: 100vh; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-family: 'Noto Sans Mono', monospace; 
+  background: linear-gradient(to bottom right, #010a13, #042135);
+  color: #ced4da;
+} 
+
+.container { 
+  max-width: 650px; 
+  margin: 5px; 
+  width: calc(100% - 10px); 
+  padding: 30px; 
+  border-radius: 10px; 
+  box-sizing: border-box; 
+  background: linear-gradient(to bottom right, #010a13, #042135);
+  box-shadow: 6px 10px 17px -8px rgba(0,0,0,0.57); 
+} 
+
+input { 
+  padding: 10px; 
+  border: 1px solid #ced4da; 
+  border-radius: 5px; 
+  outline: none; 
+  font-size: 15px; 
+  width: calc(100% - 125px); 
+} 
+
+#search-btn { 
+  padding: 10px 20px; 
+  outline: none; 
+  border: 1px solid #ced4da; 
+  margin: 5px; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  background: #f09819;
+  background: -webkit-linear-gradient(0deg, #f09819 0%, #edde5d 100%);
+  background: linear-gradient(0deg, #f09819 0%, #edde5d 100%);
+  color: #3b3b3b;
+  font-size: 16px; 
+  transition: all 0.5s; 
+} 
+
+#search-btn:hover { 
+  background: #f09819;
+  background: -webkit-linear-gradient(0deg, #f09819 0%, #edde5d 100%);
+  background: linear-gradient(0deg, #f1a438 0%, #ebde6e 100%);
+} 
+
+#result img { 
+  width: 298px; 
+  margin-top: 10px; 
+  height: 200px; 
+  border: 1px solid #ced4da; 
+} 
+
+#result h2 { 
+  margin-top: 0; 
+} 
+
+.dataRow { 
+  text-align: left; 
+} 
+
+.dataRow h4 { 
+  margin: 0; 
+  font-size: 15px; 
+} 
+
+.dataRow span { 
+  display: block; 
+  margin-bottom: 10px; 
+  font-size: 13px; 
+  max-width: 300px; 
+}
