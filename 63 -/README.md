@@ -1,10 +1,11 @@
 exemple :
 
-![Sans titre](https://github.com/fk-crafter/react-movie-api/assets/127132293/a516c0ec-089d-4944-b59c-5bfb5212c786)
 
-![Sans titre2](https://github.com/fk-crafter/react-movie-api/assets/127132293/2b9abd32-4ba4-4709-a28d-32fbbacd3d6f)
+![1](https://github.com/fk-crafter/100days-of-code/assets/127132293/553b7f24-9702-415d-bfa4-cdd73b528e53)
 
-![Sans titre3](https://github.com/fk-crafter/react-movie-api/assets/127132293/38f1e23a-8e48-4802-8611-7ab3accb8984)
+![2](https://github.com/fk-crafter/100days-of-code/assets/127132293/123c5e09-dbf1-4950-bc78-8b9d4f661ea5)
+
+![3](https://github.com/fk-crafter/100days-of-code/assets/127132293/d02c0911-f6de-4daa-9ac2-c6bef2e2e79f)
 
 # React + Vite
 
