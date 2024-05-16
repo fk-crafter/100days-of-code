@@ -1,72 +1,166 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+:root {
+  --blue-rgb: 92 192 249;
+  --green-rgb: 125 161 35;
+  --brown-rgb: 127 46 23;
+}
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+html, body {
+  background-color: black;
+}
 
 body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
+  min-height: 100vh;
   padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 1000ms;
 }
 
-.category-menu a,
-.action-menu a {
-    transition: border-bottom-color 0.3s ease-in-out;
-    border-bottom: 2px solid transparent;
-    position: relative;
+body:has(.card[data-color="blue"]:hover) {
+  background-color: #55121d
+  ;
 }
 
-.category-menu a::after,
-.action-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #81D8D0;
-    transition: width 0.2s ease-in-out;
+body:has(.card[data-color="green"]:hover) {
+  background-color: #0a1144;
 }
 
-.category-menu a:hover::after,
-.action-menu a:hover::after {
-    width: 100%;
+body:has(.card[data-color="brown"]:hover) {
+  background-color: #55121d;
 }
 
-.hero-image {
-  width: calc(70% + 50px);
-  margin-left: -50px;
-  margin-right: -50px;
-}
-
-
-.btn:hover span {
-  color: #81D8D0;
-}
-
-.btn:hover span:last-child {
+#cards {
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 10vw;
 }
 
+.card {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: scale 100ms;
+}
 
+.card .card-front-image {
+  position: relative;
+  z-index: 2;
+}
 
-/* .presentation-image {
-  transform: scaleX(0.8);
-  border-radius: 20px;
-} */
+.card .card-image {
+  width: clamp(300px, 20vw, 500px);
+  aspect-ratio: 2 / 3;
+  border-radius: clamp(0.5rem, 0.75vw, 2rem);
+}
 
-.presentation-image {
-    border-radius: 20px;
+.card-faders {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1500ms;
+  pointer-events: none;
+}
+
+.card:hover .card-faders {
+  opacity: 1;
+}
+
+.card:active {
+  scale: 0.98;
+}
+
+.card-fader {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.card-fader:nth-child(odd) {
+  animation: fade-left 3s linear infinite;
+}
+
+.card-fader:nth-child(even) {
+  animation: fade-right 3s linear infinite;
+}
+
+.card-fader:is(:nth-child(3), :nth-child(4)) {
+  animation-delay: 750ms;
+}
+
+.card-fader:is(:nth-child(5), :nth-child(6)) {
+  animation-delay: 1500ms;
+}
+
+.card-fader:is(:nth-child(7), :nth-child(8)) {
+  animation-delay: 2250ms;
+}
+
+@media(max-width: 1200px) {
+  body {    
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   
-  .presentation-txt, .presentation-images p {
-    cursor: pointer;
-    transition: opacity 0.3s ease-in-out;
+  #cards {
+    flex-direction: column; 
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem;
   }
   
-  .group:hover .presentation-txt, .group:hover p {
-    opacity: 0.75;
+  .card .card-image {
+    width: 400px;    
+  }
+}
+
+@media(max-width: 600px) {
+  #cards {
+    gap: 2rem;
+    padding: 2rem;
   }
   
+  .card {
+    width: 80%;    
+  }
+  
+  .card .card-image {
+    width: 100%;    
+  }
+}
+
+@keyframes fade-left {
+  from {
+    scale: 1;
+    translate: 0%;
+    opacity: 1;
+  }
+  
+  to {
+    scale: 0.8;
+    translate: -30%;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-right {
+  from {
+    scale: 1;
+    translate: 0%;
+    opacity: 1;
+  }
+  
+  to {
+    scale: 0.8;
+    translate: 30%;
+    opacity: 0;
+  }
+}
