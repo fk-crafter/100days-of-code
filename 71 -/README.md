@@ -1,3 +1,7 @@
+exemple :
+
+![1](https://github.com/fk-crafter/100days-of-code/assets/127132293/74e343dd-0ae2-425f-bcc5-d0fe3cc0e568)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
