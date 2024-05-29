@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@600&display=swap');
 
 body, html {
-  height: 10%;
+  height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
