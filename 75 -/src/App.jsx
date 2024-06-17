@@ -11,7 +11,6 @@ import Footer from './components/Footer';
 import SignUp from './components/SignUp';
 
 function App() {
- 
   return (
     <Router>
       <div className='App'>

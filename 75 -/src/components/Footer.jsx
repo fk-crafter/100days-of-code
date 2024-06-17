@@ -47,7 +47,7 @@ const Footer = () => {
                     <h2 className="font-semibold mb-4">Latest Tiffany News</h2>
                     <p className="mb-4">Be the first to know about our latest creations, special events, store openings, and more.</p>
                     <input type="email" placeholder="Email Address" className="border-b mb-4 w-full py-2"/>
-                    <button className="bg-black text-white py-2 px-4 rounded">Subscribe</button>
+                    <button className=" subscribe-btn bg-black text-white py-2 px-4 rounded">Subscribe</button>
                     <div className="flex space-x-4 mt-4">
                         <a href="#" className="footer-social-link"><FontAwesomeIcon icon={faInstagram} /></a>
                         <a href="#" className="footer-social-link"><FontAwesomeIcon icon={faFacebookF} /></a>

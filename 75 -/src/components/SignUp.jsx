@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { supabase } from '../../supabaseClient';
+import { useNavigate } from 'react-router-dom';
 import '../index.css';
-import NotificationSignUpSuccess from './NotificationSignUpSuccess';  // Assurez-vous que le chemin est correct
+import NotificationSignUpSuccess from './NotificationSignUpSuccess';
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +12,8 @@ const SignUp = () => {
   });
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [showNotification, setShowNotification] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,7 +23,7 @@ const SignUp = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const { username, email, password, confirmPassword } = formData;
 
@@ -30,26 +32,25 @@ const SignUp = () => {
       return;
     }
 
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-    }, {
-      data: { username }
+    // Simuler une requête d'inscription réussie
+    setSuccess('Account created successfully, you will be redirected to the home page!');
+    setError('');
+    setShowNotification(true);
+
+    // réinitialiser les champs du formulaire
+    setFormData({
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
     });
 
-    if (error) {
-      setError(error.message);
+    // fermer la notification après 5 secondes et rediriger vers la page d'accueil
+    setTimeout(() => {
       setSuccess('');
-    } else {
-      setSuccess('Account created successfully!');
-      setError('');
-      setFormData({
-        username: '',
-        email: '',
-        password: '',
-        confirmPassword: ''
-      });
-    }
+      setShowNotification(false);
+      navigate('/'); // rediriger vers la page d'accueil
+    }, 5000);
   };
 
   const backgroundStyle = {
@@ -58,14 +59,16 @@ const SignUp = () => {
 
   return (
     <div style={backgroundStyle} className="bg-gray-100 min-h-screen flex justify-center items-center">
-      <NotificationSignUpSuccess message={error || success} type={error ? 'error' : 'success'} />
+      {showNotification && (
+        <NotificationSignUpSuccess message={error || success} type={error ? 'error' : 'success'} />
+      )}
       <div className="bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg p-8 rounded-xl shadow-lg max-w-lg w-full">
         <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">Username:</label>
             <input
-              className="border border-gray-300 rounded-lg py-2 px-4 w-full bg-white bg-opacity-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="border border-grey-300 rounded-lg py-2 px-4 w-full bg-white bg-opacity-50 text-gray-700 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-emerald-300 transition-shadow shadow-md"
               type="text"
               name="username"
               value={formData.username}
@@ -76,7 +79,7 @@ const SignUp = () => {
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">Email:</label>
             <input
-              className="border border-gray-300 rounded-lg py-2 px-4 w-full bg-white bg-opacity-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 rounded-lg py-2 px-4 w-full bg-white bg-opacity-50 text-gray-700 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-emerald-300 transition-shadow shadow-md"
               type="email"
               name="email"
               value={formData.email}
@@ -87,7 +90,7 @@ const SignUp = () => {
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">Password:</label>
             <input
-              className="border border-gray-300 rounded-lg py-2 px-4 w-full bg-white bg-opacity-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 rounded-lg py-2 px-4 w-full bg-white bg-opacity-50 text-gray-700 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-emerald-300 transition-shadow shadow-md"
               type="password"
               name="password"
               value={formData.password}
@@ -98,7 +101,7 @@ const SignUp = () => {
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="confirmPassword">Confirm Password:</label>
             <input
-              className="border border-gray-300 rounded-lg py-2 px-4 w-full bg-white bg-opacity-50 text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="border border-gray-300 rounded-lg py-2 px-4 w-full bg-white bg-opacity-50 text-gray-700 focus:outline-none focus:ring-offset-2 focus:ring-2 focus:ring-emerald-300 transition-shadow shadow-md"
               type="password"
               name="confirmPassword"
               value={formData.confirmPassword}
@@ -106,7 +109,14 @@ const SignUp = () => {
               required
             />
           </div>
-          <button className="sign-up-btn text-white py-3 px-6 rounded-lg w-full font-semibold text-lg" type="submit">Sign Up</button>
+          <div className="flex items-center justify-between">
+            <button
+              className="sign-up-btn text-white py-2 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-300"
+              type="submit"
+            >
+              Sign Up
+            </button>
+          </div>
         </form>
       </div>
     </div>
