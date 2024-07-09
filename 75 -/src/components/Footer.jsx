@@ -61,7 +61,7 @@ const Footer = () => {
                 <span>Choose Location: France &nbsp; ⬇️</span>
             </div>
             <div className="text-center mt-4">
-                <span>© Fowad KHAN 2024</span>
+                <span>© Fowad 2024</span>
             </div>
         </footer>
     );
