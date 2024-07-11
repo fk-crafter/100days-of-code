@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary: #2e123f;
+    --color-card: #141427;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--color-primary);
+}
+
+body .rc-slider-rail {
+    background: rgb(255 255 255 / 12%);
+}
+
+body .rc-slider-handle {
+    border-color: var(--color-card);
+    background: var(--color-primary);
+    opacity: 1;
+    scale: 1.5;
+}
+
+body .rc-slider-handle:hover,
+body .rc-slider-handle-dragging {
+    box-shadow: none !important;
+    border-color: var(--color-card) !important;
+    cursor: pointer;
+}
+
+body .rc-slider-track {
+    background-color: var(--color-primary);
+}
+ .card {
+    display: grid;
+    gap: 14px;
+    padding: 20px 20px 24px;
+    width: 260px;
+    background: var(--color-card);
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgb(0 0 0 / 10%);
+}
+
+ .card h2 {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(255 255 255 / 50%)
+}
+
+.card var {
+    margin: 0;
+    font-size: 30px;
+    font-style: normal;
+    color: rgb(255 255 255 / 96%);
+}
+
+.card var abbr {
+    color: rgb(255 255 255 / 96%);
+    margin-right: 4px;
+}
