@@ -36,7 +36,8 @@ body .rc-slider-handle-dragging {
 body .rc-slider-track {
     background-color: var(--color-primary);
 }
- .card {
+
+.card {
     display: grid;
     gap: 14px;
     padding: 20px 20px 24px;
@@ -44,13 +45,23 @@ body .rc-slider-track {
     background: var(--color-card);
     border-radius: 10px;
     box-shadow: 0 20px 30px rgb(0 0 0 / 10%);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    perspective: 1000px;
 }
 
- .card h2 {
+.card:hover {
+    box-shadow: 0 30px 40px rgb(0 0 0 / 20%);
+}
+
+.card-content {
+    transition: transform 0.1s ease;
+}
+
+.card h2 {
     margin: 0 0 8px;
     font-size: 14px;
     font-weight: 400;
-    color: rgb(255 255 255 / 50%)
+    color: rgb(255 255 255 / 50%);
 }
 
 .card var {
