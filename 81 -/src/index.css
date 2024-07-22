@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this CSS code to your global stylesheet or within a CSS-in-JS solution */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px #008080, 0 0 10px #008080, 0 0 15px #008080, 0 0 20px #008080, 0 0 25px #008080;
+  }
+  50% {
+    box-shadow: 0 0 10px #008080, 0 0 20px #008080, 0 0 30px #008080, 0 0 40px #008080, 0 0 50px #008080;
+  }
+}
+
+.animate-glow {
+  animation: glow 1.5s infinite;
+}
