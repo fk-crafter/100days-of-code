@@ -39,7 +39,7 @@ const App = () => {
             onClick={toggleFilters}
           >
             <FontAwesomeIcon icon={faFilter} className="mr-2" />
-            <span>Filtres</span>
+            <span>Filters</span>
           </button>
           {showFilters && (
             <div className="absolute right-0 mt-2 bg-white p-4 rounded shadow-md">
