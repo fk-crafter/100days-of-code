@@ -64,7 +64,6 @@ const Carousel = () => {
               <img src={product.img} alt={product.topic} className="w-full h-full object-contain" />
               {isActive && (
                 <div className="absolute top-1/2 left-[-25rem] transform -translate-y-1/2 text-left">
-                  <div className="text-2xl font-medium">DESIGN SLIDER</div>
                   <div className="text-4xl font-medium">{product.topic}</div>
                   <div className="text-sm text-gray-500">{product.shortDescription}</div>
                   <button className="mt-4 px-4 py-2 border-b-2 border-gray-500 text-gray-700 hover:bg-gray-200 transition">SEE MORE &#8599;</button>
