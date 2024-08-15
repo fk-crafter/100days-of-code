@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="font-poppins bg-gray-100">
       <Navbar />
-      <Carousel />
+      <Carousel /
     </div>
   );
 };
