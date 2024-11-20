@@ -45,7 +45,7 @@ document.querySelectorAll('input[type="text"], input[type="password"]').forEach(
     input.addEventListener('input', () => {
         let username = document.getElementById('username').value;
         let password = document.getElementById('password').value;
-        if(username !== '' && password !== '') 
+        if(username !== '' && password !== '') {
             resetButtonPosition();
         }
     });
