@@ -8,7 +8,6 @@ document.body.appendChild(renderer.domElement);
 
 const geometry = new THREE.BoxGeometry();
 
-// create ShaderMaterial
 const material = new THREE.ShaderMaterial({
   vertexShader: `
     varying vec2 vUv;
