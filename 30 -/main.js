@@ -40,7 +40,7 @@ camera.position.z = 5;
 const animate = function() {
   requestAnimationFrame(animate);
 
-  // Rotation du cube
+
   cube.rotation.x += 0.01;
   cube.rotation.y += 0.01;
 
